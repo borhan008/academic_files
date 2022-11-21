@@ -1,0 +1,1 @@
+{"name":"Local: NewtonForwardMethod","url":"d:\\AcademicGithub\\Numerical Analysis\\Lab\\NewtonForwardMethod.c","tests":[{"id":1668952676636,"input":"5\n1891 1901 1911 1921 1931\n46 66 81 93 101\n1895","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\AcademicGithub\\Numerical Analysis\\Lab\\NewtonForwardMethod.c","group":"local","local":true}
