@@ -1,12 +1,12 @@
 #include<stdio.h>
-#define max 500
+#define max 5
 
 
 int Queue[500];
 int front=-1, rear=-1;
 
 void enqueue(int x){
-	if(rear == max){
+	if(rear == max-1){
 		printf("Overflow\n");
 		return;
 	}
@@ -21,12 +21,6 @@ int dequeue(){
 		return -1;
 	}
 	int x = Queue[front];
-	
-	//Not necessary
-	for(int i=0; i<rear-1; i++){
-		Queue[i]=Queue[i+1];
-	}
-	
 	return x;
 }
 
@@ -52,7 +46,9 @@ int main(){
 	traverse();
 	printf("Dequeue : %d \n" ,dequeue());
 	traverse();
-			
+	enqueue(30);
+	traverse();
+	enqueue(40);	
 	return 0;
 	
 }
