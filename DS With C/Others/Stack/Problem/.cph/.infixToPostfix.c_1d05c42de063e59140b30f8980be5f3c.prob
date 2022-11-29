@@ -1,0 +1,1 @@
+{"name":"Local: infixToPostfix","url":"d:\\AcademicGithub\\DS With C\\Others\\Stack\\Problem\\infixToPostfix.c","tests":[{"id":1669649567473,"input":"(a+b)*c","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\AcademicGithub\\DS With C\\Others\\Stack\\Problem\\infixToPostfix.c","group":"local","local":true}
