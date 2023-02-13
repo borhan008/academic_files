@@ -61,8 +61,7 @@ int main(){
 		}
 		if(y-j-1 >= 2){
 			pushLow(j+1);
-			pushHigh(y);
-				
+			pushHigh(y);	
 		}
 	
 	}
