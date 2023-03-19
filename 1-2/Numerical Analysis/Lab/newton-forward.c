@@ -33,23 +33,18 @@ int main()
 		for (int j = 0; j < n - i; j++)
 		{
 
-			// printf(" %lf  %lf ", da[j + 1][i - 1], da[j][i - 1]);
 			da[j][i] = (da[j + 1][i - 1] - da[j][i - 1]);
-			// printf(" %lf \n ", da[j][i]);
 		}
 	}
 
 	double p = (xi - x[0]) / (x[1] - x[0]);
 	double ans = y[0];
+	double fact=1;
 	for (int i = 1; i < n; i++)
 	{
 		double localP = p * 1.00;
-		double fact = 1.00;
+		fact *= 1.00;
 
-		for (int j = 1; j <= i; j++)
-		{
-			fact = fact * j;
-		}
 		for (int j = 1; j < i; j++)
 		{
 			localP *= (p - j);

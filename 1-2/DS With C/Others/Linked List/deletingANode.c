@@ -24,10 +24,6 @@ int main(){
 		point = LINK[point];
 	}
 	
-	
-	
-	
-	
-	
+
 	return 0;
 }

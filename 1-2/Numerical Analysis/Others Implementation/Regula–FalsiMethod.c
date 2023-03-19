@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define f(x) (x * x * x - 2 * x - 5)
+#define f(x) (x * x * x - 6 * x + 4)
 
 int main()
 {
@@ -35,9 +35,11 @@ int main()
 		b++;
 	}
 	// Step 2 & 3 : finding the root
-
 	// we'll just jot down the steps which are written on the blog
 	double ans = a; // we're gonna store our answer here
+	double x = ((x1 * f(x2) - x2 * f(x1)) /
+					(f(x2) - f(x1)));
+					printf("%lf\n", x);
 	while (1)
 	{
 		double prevAns = ans;
@@ -50,6 +52,8 @@ int main()
 		}
 		else
 			x1 = x;
+			printf("%lf %lf \n", x, x);
+
 		// Calculating the the  literation of last two answer
 		if (fabs((prevAns) - (ans)) <= 0.001)
 		{

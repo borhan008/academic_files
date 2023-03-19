@@ -15,7 +15,7 @@ int main()
 			dhoren,
 			1) (0 1), (1,2) , ...
 			2) (0,-1), (-1,-2), ....
-			ig, yk why.
+			ig, yk why.--
 		*/
 		if (f(a) * f((a - (double)1.0000)) < 0)
 		{
@@ -35,7 +35,6 @@ int main()
 		b++;
 	}
 	// Step 2 & 3 : finding the root
-
 	// we'll just jot down the steps which are written on the blog
 	double x;	// the intermediate poing
 	double ans; // we're gonna store our answer here
@@ -55,6 +54,6 @@ int main()
 		}
 	}
 
-	printf("%lf", ans);
+	printf("%lf ", f(x1));
 	return 0;
 }
