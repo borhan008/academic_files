@@ -3,4 +3,4 @@
 
 ### NSTU Cover Page Generator
 
-(https://nstucoverpage.netlify.app/)[https://nstucoverpage.netlify.app/]
+[https://nstucoverpage.netlify.app/](https://nstucoverpage.netlify.app/))
