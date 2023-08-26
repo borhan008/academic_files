@@ -4,6 +4,15 @@ The list includes details such as the code number and price of each item. You wi
 the operations such as adding an item to the list, deleting an item from the list and printing
 the total value of the order. Write a program to implement these operations using a class
 with arrays as data members
+
+Input:
+5
+1 008 100
+1 010 200
+3
+2 010
+3
+
 */
 #include<bits/stdc++.h>
 using namespace std;
@@ -31,6 +40,12 @@ class Order{
 				ind = i;	break;
 			}
 		}
+		
+		if(ind == -1){
+			cout << "Code not found\n";
+			return;
+		}
+		
 		for(int i=ind; i<n; i++){
 			arr[i]=arr[i+1];
 		}
@@ -50,7 +65,7 @@ class Order{
 
 
 int main(){
-	cout << "1 - Adding Items\n2 - Deleting Item \n3 - Display\n";
+	cout << "First Input the test Cases\n1 - Adding Items\n2 - Deleting Item \n3 - Display\n";
 	int t;	cin >> t;
 	Order order;
 	while(t--){
