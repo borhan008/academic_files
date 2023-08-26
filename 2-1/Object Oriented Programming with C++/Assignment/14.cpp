@@ -1,6 +1,5 @@
 /*
-Write a C++ program to overload +, - and = operators.
-
+Write a program to manipulate complex numbers using operator overloading.
 Complex Number: a+bi
 (a+ib)+(c+id) = (a+c) + i(c+d)
 (a+ib)-(c+id) = (a-c) + i(a-d)
