@@ -44,13 +44,13 @@ class cur_acct : public account{
 	int interest_rate, min_balance, penalty;
 	public:
 	cur_acct(string name, string acc_num, string acc_type, int balance, int rate, int min_balance, int penalty) : account(name, acc_num, acc_type, balance){
-		interest_rate=rate;
+		interest_rate=rate/100;
 		this->min_balance = min_balance;
 		this->penalty = penalty;
 	}
 	
 	void checkInterest(){
-		int interest = (interest_rate/100)*balance;
+		int interest = balance*(1+interest_rate) - balance;
 		balance += interest;
 		cout << "New balance : " << balance << "\n";
 	}
