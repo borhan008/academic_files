@@ -43,7 +43,7 @@ class account{
 class cur_acct : public account{
 	int interest_rate, min_balance, penalty;
 	public:
-	cur_acct(string name, string acc_num, string acc_type, int balance, int rate, int min_balance, int penalty) : account(name, acc_num, acc_type, balance){
+	cur_acct(string name, string acc_num, int balance, int rate, int min_balance, int penalty) : account(name, acc_num, "Current", balance){
 		interest_rate=rate/100;
 		this->min_balance = min_balance;
 		this->penalty = penalty;
@@ -70,6 +70,7 @@ class cur_acct : public account{
 		} else{
 			balance -= amount;
 			cout << "Withdraw successfull\n";
+			checkPenalty();
 		}
 	}	
 	
@@ -78,7 +79,7 @@ class cur_acct : public account{
 class sav_acct : public account{
 	
 	public:
-	sav_acct(string name, string acc_num, string acc_type, int balance) : account(name, acc_num, acc_type, balance){
+	sav_acct(string name, string acc_num, int balance) : account(name, acc_num, "Savings", balance){
 		
 	}	
 	
@@ -94,7 +95,7 @@ class sav_acct : public account{
 
 int main(){
 	cout << "Saving account \n";
-	sav_acct acc1("Borhan", "008", "Saving", 1000);
+	sav_acct acc1("Borhan", "008",  1000);
 	acc1.display();
 	acc1.deposit(200);
 	acc1.display();
@@ -103,15 +104,12 @@ int main(){
 	acc1.withdraw(701);
 	
 	cout << "\n\nCurrent account \n";
-	cur_acct acc2("Borhan", "0100", "Current", 500, 40, 300, 20);
+	cur_acct acc2("Borhan", "0100", 500, 40, 300, 20);
 	acc2.display();
-	acc2.checkPenalty();
 	acc2.deposit(400);
 	acc2.withdraw(200);
 	acc2.display();
 	acc2.withdraw(405);
-	acc2.display();
-	acc2.checkPenalty();
 	acc2.display();
 	
 }

@@ -36,7 +36,8 @@ class DM {
 	void display(){
 		cout << m << " m " << cm << " cm\n";
 	}	
-	friend void add(DM &dm, DB &db);
+	friend void add_DM(DM &dm, DB &db);
+	friend void add_DB(DM &dm, DB &db);
 };
 
 class DB {
@@ -58,21 +59,27 @@ class DB {
 	void display(){
 		cout << ft << " feet " << inch << " inch\n";
 	}
-	friend void add(DM &dm, DB &db);
+	friend void add_DB(DM &dm, DB &db);
+	friend void add_DM(DM &dm, DB &db);
 };
 
-void add(DM &dm, DB &db){
+	
+void add_DM(DM &dm, DB &db){
 	DM d1;
 	d1.m = dm.m + d1.fttom(db.ft);
 	d1.cm = dm.cm + d1.inchtocm(db.inch);
 	
+	d1.display();
+}
+
+void add_DB(DM &dm, DB &db){
 	DB d2;
 	d2.ft = db.ft + d2.mtoft(dm.m);
 	d2.inch = db.inch + d2.cmtoinch(dm.cm);
-	
-	d1.display();
-	d2.display();
+		
+	d2.display();	
 }
+
 
 int main(){
 	DM dm; DB db;
@@ -83,5 +90,5 @@ int main(){
 	cout << "Input feet and inch: \n";
 	cin >> x >> y; db.get(x, y);	
 	
-	add(dm, db);
+	add_DM(dm, db);	add_DB(dm, db);
 }
