@@ -28,9 +28,6 @@ int main(){
 
 		for(int j=0; j<n; j++){
 			if(ans[j][0] > sum and ans[j][0] <= sum+x){
-				if(i==0){
-					cout << j << " " ;
-				}
 				r.push(j);
 			}
 		} 
@@ -46,7 +43,7 @@ int main(){
 		sum += x;
 	}
 	
-	cout << "\nProcess\tArrive\tBurst\tCompiler\tTAT\tWT\tRT\n";
+	cout << "\nProcess\tArrive\tBurst\tCT\tTAT\tWT\tRT\n";
 	for(int i=0; i<n; i++){
 		cout << "P" << i+1 << "\t";
 		for(int j=0; j<6; j++){
