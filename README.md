@@ -13,8 +13,11 @@
 **CSTE3101 : Coomunication Engineering**
 
 1. [Bangla](https://www.youtube.com/watch?v=AJ-QfSSgXTg&list=PLMjaJoGgWV1nNjZXvcps2TrjdloXQxwbn&index=2&ab_channel=RojibEEEAcademy)
-1. [Superheterodyne Receive:(90-93)](https://www.youtube.com/watch?v=gwW0MnNVevY&list=PLc3zKsWdO93e2I625YDlXi0LlbBth1QpB&index=93&ab_channel=RKClasses)
-1. [English](https://www.youtube.com/watch?v=kAs8OerKRmc&list=PLgwJf8NK-2e7uyUYrpgUUQowmRuKxRdwp&index=1&ab_channel=EngineeringFunda)
+2. [Superheterodyne Receive:(90-93)](https://www.youtube.com/watch?v=gwW0MnNVevY&list=PLc3zKsWdO93e2I625YDlXi0LlbBth1QpB&index=93&ab_channel=RKClasses)
+3. [English](https://www.youtube.com/watch?v=kAs8OerKRmc&list=PLgwJf8NK-2e7uyUYrpgUUQowmRuKxRdwp&index=1&ab_channel=EngineeringFunda)
+4. [Information Theory, English](https://www.youtube.com/watch?v=kcKgD1bph44&list=PLdFco-rRUDt36USE1vPTZwwq70b3TdMA_&index=2&ab_channel=RTUWallah)
+5. [Infomation Theory, Bangla](https://www.youtube.com/playlist?list=PLgluYk4ut4L1P_fGHgGDsyfzK28nscPcX)
+6. [Information Theory Introduction (PDF)](https://www.slideshare.net/slideshow/information-theory-introduction/73940564)
 
 **CSTE3102 : Digital Singal Processing**
 
