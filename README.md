@@ -18,6 +18,7 @@
 4. [Information Theory, English](https://www.youtube.com/watch?v=kcKgD1bph44&list=PLdFco-rRUDt36USE1vPTZwwq70b3TdMA_&index=2&ab_channel=RTUWallah)
 5. [Infomation Theory, Bangla](https://www.youtube.com/playlist?list=PLgluYk4ut4L1P_fGHgGDsyfzK28nscPcX)
 6. [Information Theory Introduction (PDF)](https://www.slideshare.net/slideshow/information-theory-introduction/73940564)
+7. [Digital Modulation Technique](https://www.youtube.com/watch?v=tn5NgjzNq_w&ab_channel=TechnicalGuftgu)
 
 **CSTE3102 : Digital Singal Processing**
 
