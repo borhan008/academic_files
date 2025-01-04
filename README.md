@@ -40,5 +40,5 @@
 
 1. [DBMS - Unacademy](https://www.youtube.com/playlist?list=PLG9aCp4uE-s0bu-I8fgDXXhVLO4qVROGy)
 2. [Gate Smashers (Best for learning Functional Dependency)](https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y)
-3. [DBMS Notes](https://www.poriyaan.in/paper/database-management-system-79/)
+3. [DBMS Notes, Questions, Lectures](https://www.poriyaan.in/paper/database-management-system-79/)
 4. [Some Good Example with Solution](https://www.exploredatabase.com/)
