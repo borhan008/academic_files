@@ -32,9 +32,9 @@ pip install pandas numpy scipy
 
 ---
 
-![image.png](https://i.ibb.co.com/GPtPysJ/image.png)
+![image.png](https://i.ibb.co.com/q1W1K0n/image.png)
 
-![image.png](https://i.ibb.co.com/Bs0k9kY/image2.png)
+![image.png](https://i.ibb.co.com/nkxpFpK/image2.png)
 
 ## Code
 
