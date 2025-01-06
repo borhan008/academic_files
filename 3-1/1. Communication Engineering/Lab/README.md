@@ -45,8 +45,10 @@ pip install pandas numpy scipy
 ```python
 import pandas as pd
 
-data = pd.read_csv("data/^TWII.csv");
+data = pd.read_csv("data/^TWII.csv"); #reading .csv file
+data2 = pd.read_excel("data/Chaina_shanghai.xlsx"); #reading .xlsx file
 print(data.head());
+print(data2.head());
 ```
 
 **Calculating Information Content**
