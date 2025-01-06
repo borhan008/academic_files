@@ -20,7 +20,11 @@
 6. [Information Theory Introduction (PDF)](https://www.slideshare.net/slideshow/information-theory-introduction/73940564)
 7. [Digital Modulation Technique](https://www.youtube.com/watch?v=tn5NgjzNq_w&ab_channel=TechnicalGuftgu)
 
-**CSTE3102 : Digital Singal Processing**
+**CSTE3102 : Coomunication Engineering Lab**
+
+1. [Calculating Entropy and Mutual Information in Python](https://www.youtube.com/watch?v=pJA0X4ele-4&ab_channel=MikeSaint-Antoine)
+
+**CSTE3103 : Digital Singal Processing**
 
 1. [ Hindi (Best One, Similiar as Signals and Systems)](https://www.youtube.com/watch?v=x5qRAihZRks&list=PL9RcWoqXmzaIG-RWneeqDJ-FCt66S15pl&index=2)
 2. [ Signals, Systems, Convolution](https://www.youtube.com/playlist?list=PLnPkMfyANm0yc6SZKH76QyucOZBPUUEYP)
@@ -42,3 +46,13 @@
 2. [Gate Smashers (Best for learning Functional Dependency)](https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y)
 3. [DBMS Notes, Questions, Lectures](https://www.poriyaan.in/paper/database-management-system-79/)
 4. [Some Good Example with Solution](https://www.exploredatabase.com/)
+
+**CSTE 3201: Computer Networking**
+
+**CSTE 3203: Microwave and Satellite Communication**
+
+**CSTE 3207: Optical Fiber Communication**
+
+**CSTE 3209: Software Engineering and Information System Design**
+
+**CSTE 3211: Artificial Intelligence and Neural Networks**
