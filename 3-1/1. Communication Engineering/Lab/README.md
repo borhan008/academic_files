@@ -68,7 +68,7 @@ for i in range(len(value)) :
     print("Symbol: ", value[i], "Information: ", information)
 ```
 
-**Calculating Entropy**
+**Calculating Entropy (Discontinuous)**
 
 ```python
 import pandas as pd
@@ -96,26 +96,40 @@ print(entropy(prob))
 
 ```
 
-**Calculating Entropy by Using Bins**
+**Calculating Entropy by Using Bins(Continuous)**
 
 ```python
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv("data/^TWII.csv")
-column = data['Open']
+data = pd.read_csv("data/canada.csv")
+data['Date'] = pd.to_datetime(data['Date'], format='%Y-%m-%d')
+data.sort_values(by='Date', ascending=True, inplace=True)
+
+column = data['Close']
+column= np.log(data['Close']) - np.log(data['Close'].shift(1))
 column = column.dropna()
 
+print(f"Max Value : {column.max()}")
+print(f"Min Value : {column.min()}")
+print(f"Differece : {column.max() - column.min()}")
+print("Bins : 12")
+
 def entropy(column, bins) :
-    binned_dist = np.histogram(column, bins)[0]
+    binned_dist, bin_edges = np.histogram(column, bins)
     probs = binned_dist / np.sum(binned_dist)
-    probs = probs[np.nonzero(probs)]
+    bin_table = pd.DataFrame({
+        'Bin Range': [f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})" for i in range(len(bin_edges)-1)],
+        'Frequency': binned_dist,
+        'Probability': probs
+    });
+    print(bin_table)
     entropy = 0
     for i in range(len(probs)):
         entropy -= probs[i] * np.log2(probs[i]);
     return entropy
 
-print(entropy(column, 100))
+print(f"Entropy : {entropy(column, 12)}")
 ```
 
 **NOTE :**
@@ -129,67 +143,91 @@ print(entropy(column, 100))
     entropy = -np.sum(probs * np.log2(probs));
 ```
 
-**Joint Entropy**
-
-```python
-import pandas as pd
-import numpy as np
-
-data = pd.read_csv("data/^TWII.csv")
-
-#OPEN
-X = data['Open']
-X = X.dropna()
-
-# Close
-Y = data['Close']
-Y = Y.dropna()
-
-def jointEntropy(X, Y, bins) :
-    binned_XY = np.histogram2d(X, Y, bins)[0]
-    probsXY = binned_XY / np.sum(binned_XY)
-    probsXY = probsXY[np.nonzero(probsXY)]
-    jointEntropy = -np.sum(probsXY * np.log2(probsXY));
-    return jointEntropy
-
-print(jointEntropy(X, Y, 100))
-
-```
-
 **Mutual Information**
 
 ```python
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv("data/^TWII.csv")
-
-#X
-X = data['Open']
+# X
+data = pd.read_csv("data/canada.csv");
+X = data[['Date', 'Close']];
+X.loc[:, 'Date'] = pd.to_datetime(X['Date'])
+X.loc[:, 'Close'] = np.log(X['Close']) - np.log(X['Close'].shift(1));
+X = X[X['Close'].notna()];
+X.sort_values(by='Date', ascending=True, inplace=True)
 X = X.dropna()
 
-#Y
-Y = data['Close']
+# Y
+data2 = pd.read_csv("data/^TWII.csv");
+Y = data2[['Date', 'Close']];
+Y.loc[:, 'Date'] = pd.to_datetime(Y['Date'])
+Y.loc[:, 'Close']  = np.log(Y['Close']) - np.log(Y['Close'].shift(1))
+Y = Y[Y['Close'].notna()];
+Y.sort_values(by='Date', ascending=True, inplace=True)
 Y = Y.dropna()
 
+# Merge
+XY = pd.merge(X, Y, on='Date', how='inner');
+
+
+
 def entropy(X, bins):
-    binned_dist = np.histogram(X, bins)[0]
+    print(f"Max Value : {X.max() : .4f}")
+    print(f"Min Value : {X.min() : .4f}")
+    print(f"Differece : {X.max() - X.min() : .4f}")
+    print(f"Bins : {bins}")
+    binned_dist, bin_edges = np.histogram(X, bins)
     probs = binned_dist / np.sum(binned_dist)
+
+
+    bin_table = pd.DataFrame({
+        'Bin Range': [f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})" for i in range(len(bin_edges)-1)],
+        'Frequency': binned_dist,
+        'Probability': probs
+    });
+    print(bin_table)
     probs = probs[np.nonzero(probs)]
     entropy = -np.sum(probs * np.log2(probs))
+
     return entropy
 
-def jointEntropy(X, Y, bins) :
-    binned_XY = np.histogram2d(X, Y, bins)[0]
+def jointEntropy(X, Y, bins):
+    binned_XY, binnedX, binnedY = np.histogram2d(X, Y, bins)
     probsXY = binned_XY / np.sum(binned_XY)
+
+    # Show the joint distribution
+    rows = []
+    for i in range(len(binnedX) - 1):
+        for j in range(len(binnedY) - 1):
+            rows.append({
+                'X Bin': f"[{binnedX[i]:.4f}, {binnedX[i+1]:.4f})",
+                'Y Bin': f"[{binnedY[j]:.4f}, {binnedY[j+1]:.4f})",
+                'Frequency': binned_XY[i, j],
+                'Probability': probsXY[i, j]
+            })
+
+    table = pd.DataFrame(rows)
+    print(table)
+
     probsXY = probsXY[np.nonzero(probsXY)]
-    jointEntropy = -np.sum(probsXY * np.log2(probsXY));
+    jointEntropy = -np.sum(probsXY * np.log2(probsXY))
+
     return jointEntropy
 
 def mutualInformation(X, Y, bins) :
-    return entropy(X, bins) + entropy(Y, bins) - jointEntropy(X, Y, bins)
+    print("X : ");
+    entropyX = entropy(X, bins);
+    print(f"Entropy X, H(X) : {entropyX:.4f}");
+    print("\n\nY : ");
+    entropyY = entropy(Y, bins);
+    print(f"Entropy Y, H(Y) : {entropyY:.4f}");
+    print("\nJoint : ");
+    joint = jointEntropy(X, Y, bins);
+    print(f"Joint Entropy H(X, Y) : {joint:.4f}");
+    return entropyX + entropyY - joint
 
-print(mutualInformation(X, Y, 100))
+print(f"\n Mutual Information: {mutualInformation(XY['Close_x'], XY['Close_y'], 12) : .4f}");
 
 ```
 
