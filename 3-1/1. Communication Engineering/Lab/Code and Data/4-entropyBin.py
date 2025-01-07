@@ -18,14 +18,16 @@ def entropy(column, bins) :
     binned_dist, bin_edges = np.histogram(column, bins)
     probs = binned_dist / np.sum(binned_dist)
     bin_table = pd.DataFrame({
+        'Symbol' : [f"{i}" for i in range(1, len(bin_edges))],
         'Bin Range': [f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})" for i in range(len(bin_edges)-1)],
         'Frequency': binned_dist,
         'Probability': probs
     });
+    probs = probs[np.nonzero(probs)]
     print(bin_table)
     entropy = 0
     for i in range(len(probs)):
         entropy -= probs[i] * np.log2(probs[i]);
     return entropy
 
-print(f"Entropy : {entropy(column, 12) : .4f}")
+print("Entropy :",  entropy(column, 12).round(4))

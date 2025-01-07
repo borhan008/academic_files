@@ -22,8 +22,6 @@ Y = Y.dropna()
 # Merge
 XY = pd.merge(X, Y, on='Date', how='inner');
 
-
-
 def entropy(X, bins):
     print(f"Max Value : {X.max() : .4f}")
     print(f"Min Value : {X.min() : .4f}")
@@ -34,6 +32,7 @@ def entropy(X, bins):
     
 
     bin_table = pd.DataFrame({
+        'Symbol' : [f"{i}" for i in range(1, len(bin_edges))],
         'Bin Range': [f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})" for i in range(len(bin_edges)-1)],
         'Frequency': binned_dist,
         'Probability': probs
