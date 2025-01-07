@@ -2,13 +2,17 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv("data/^TWII.csv")
+data['Date'] = pd.to_datetime(data['Date'], format='%Y-%m-%d')
+data.sort_values(by='Date', ascending=True, inplace=True)
 
-#OPEN
-X = data['Open']
+#X
+X = data['Adj Close']
+X= np.log(data['Adj Close']) - np.log(data['Adj Close'].shift(1))
 X = X.dropna()
 
-# Close
-Y = data['Close']
+# Y
+Y = data['Open']
+Y = np.log(data['Open']) - np.log(data['Open'].shift(1))
 Y = Y.dropna()
 
 def jointEntropy(X, Y, bins) :
@@ -18,5 +22,5 @@ def jointEntropy(X, Y, bins) :
     jointEntropy = -np.sum(probsXY * np.log2(probsXY));
     return jointEntropy
 
-print(jointEntropy(X, Y, 100))
+print(jointEntropy(X, Y, 12))
 
