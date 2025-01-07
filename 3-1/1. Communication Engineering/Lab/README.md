@@ -103,7 +103,7 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv("data/canada.csv")
-data['Date'] = pd.to_datetime(data['Date'], format='%Y-%m-%d')
+data.loc[:, 'Date'] = pd.to_datetime(data['Date'])
 data.sort_values(by='Date', ascending=True, inplace=True)
 
 column = data['Close']
@@ -129,7 +129,7 @@ def entropy(column, bins) :
         entropy -= probs[i] * np.log2(probs[i]);
     return entropy
 
-print(f"Entropy : {entropy(column, 12)}")
+print(f"Entropy : {entropy(column, 12) : .4f}")
 ```
 
 **NOTE :**
