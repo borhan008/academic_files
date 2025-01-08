@@ -104,6 +104,7 @@ import numpy as np
 
 data = pd.read_csv("data/canada.csv")
 data.loc[:, 'Date'] = pd.to_datetime(data['Date'])
+data['Close'] = pd.to_numeric(data['Close'], errors='coerce')
 data.sort_values(by='Date', ascending=True, inplace=True)
 
 column = data['Close']
@@ -155,6 +156,7 @@ import numpy as np
 data = pd.read_csv("data/canada.csv");
 X = data[['Date', 'Close']];
 X.loc[:, 'Date'] = pd.to_datetime(X['Date'])
+X['Close'] = pd.to_numeric(X['Close'], errors='coerce')
 X.loc[:, 'Close'] = np.log(X['Close']) - np.log(X['Close'].shift(1));
 X = X[X['Close'].notna()];
 X.sort_values(by='Date', ascending=True, inplace=True)
@@ -164,6 +166,8 @@ X = X.dropna()
 data2 = pd.read_csv("data/^TWII.csv");
 Y = data2[['Date', 'Close']];
 Y.loc[:, 'Date'] = pd.to_datetime(Y['Date'])
+Y['Close'] = pd.to_numeric(Y['Close'], errors='coerce')
+
 Y.loc[:, 'Close']  = np.log(Y['Close']) - np.log(Y['Close'].shift(1))
 Y = Y[Y['Close'].notna()];
 Y.sort_values(by='Date', ascending=True, inplace=True)
@@ -229,6 +233,9 @@ def mutualInformation(X, Y, bins) :
     return entropyX + entropyY - joint
 
 print(f"\n Mutual Information: {mutualInformation(XY['Close_x'], XY['Close_y'], 12) : .4f}");
+
+
+
 ```
 
 **Using Library function**
