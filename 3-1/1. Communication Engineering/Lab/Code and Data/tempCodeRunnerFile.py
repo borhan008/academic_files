@@ -1,1 +1,1 @@
-f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})"
+canada.csv
