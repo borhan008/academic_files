@@ -101,12 +101,11 @@ print(entropy(prob))
 ```python
 import pandas as pd
 import numpy as np
-
 data = pd.read_csv("data/canada.csv")
-data.loc[:, 'Date'] = pd.to_datetime(data['Date'])
+data['Date'] = pd.to_datetime(data['Date'])
 data['Close'] = pd.to_numeric(data['Close'], errors='coerce')
-data.sort_values(by='Date', ascending=True, inplace=True)
 
+data.sort_values(by='Date', ascending=True, inplace=True)
 column = data['Close']
 column= np.log(data['Close']) - np.log(data['Close'].shift(1))
 column = column.dropna()
@@ -114,13 +113,12 @@ column = column.dropna()
 print(f"Max Value : {column.max()}")
 print(f"Min Value : {column.min()}")
 print(f"Differece : {column.max() - column.min()}")
-print("Bins : 12")
 
 def entropy(column, bins) :
+    print("Bins : ", bins);
     binned_dist, bin_edges = np.histogram(column, bins)
     probs = binned_dist / np.sum(binned_dist)
     bin_table = pd.DataFrame({
-        'Symbol' : [f"{i}" for i in range(1, len(bin_edges))],
         'Bin Range': [f"[{bin_edges[i]:.4f}, {bin_edges[i+1]:.4f})" for i in range(len(bin_edges)-1)],
         'Frequency': binned_dist,
         'Probability': probs
@@ -132,7 +130,8 @@ def entropy(column, bins) :
         entropy -= probs[i] * np.log2(probs[i]);
     return entropy
 
-print("Entropy :",  entropy(column, 12).round(4))
+print(f"Entropy : {entropy(column, 12).round(4)}")
+
 ```
 
 **NOTE :**
@@ -148,15 +147,16 @@ print("Entropy :",  entropy(column, 12).round(4))
 
 **Mutual Information**
 
-```python
+````python
 import pandas as pd
 import numpy as np
 
 # X
 data = pd.read_csv("data/canada.csv");
-X = data[['Date', 'Close']];
+X = data[['Date', 'Close']]
+X = X.copy()
+
 X.loc[:, 'Date'] = pd.to_datetime(X['Date'])
-X['Close'] = pd.to_numeric(X['Close'], errors='coerce')
 X.loc[:, 'Close'] = np.log(X['Close']) - np.log(X['Close'].shift(1));
 X = X[X['Close'].notna()];
 X.sort_values(by='Date', ascending=True, inplace=True)
@@ -165,6 +165,8 @@ X = X.dropna()
 # Y
 data2 = pd.read_csv("data/^TWII.csv");
 Y = data2[['Date', 'Close']];
+Y = Y.copy()
+
 Y.loc[:, 'Date'] = pd.to_datetime(Y['Date'])
 Y['Close'] = pd.to_numeric(Y['Close'], errors='coerce')
 
@@ -232,11 +234,7 @@ def mutualInformation(X, Y, bins) :
     print(f"Joint Entropy H(X, Y) : {joint:.4f}");
     return entropyX + entropyY - joint
 
-print(f"\n Mutual Information: {mutualInformation(XY['Close_x'], XY['Close_y'], 12) : .4f}");
-
-
-
-```
+print(f"\n Mutual Information: {mutualInformation(XY['Close_x'], XY['Close_y'], 12) : .4f}");```
 
 **Using Library function**
 
@@ -264,7 +262,7 @@ print(entropy(Y_binned, base=2))
 
 mutual_info = mutual_info_score(X_binned,Y_binned)
 print(mutual_info)
-```
+````
 
 **Graph**
 
