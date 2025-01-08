@@ -3,9 +3,10 @@ import numpy as np
 
 # X
 data = pd.read_csv("data/canada.csv");
-X = data[['Date', 'Close']];
+X = data[['Date', 'Close']]
+X = X.copy()
+
 X.loc[:, 'Date'] = pd.to_datetime(X['Date'])
-X['Close'] = pd.to_numeric(X['Close'], errors='coerce')
 X.loc[:, 'Close'] = np.log(X['Close']) - np.log(X['Close'].shift(1));
 X = X[X['Close'].notna()];
 X.sort_values(by='Date', ascending=True, inplace=True)
@@ -14,6 +15,8 @@ X = X.dropna()
 # Y
 data2 = pd.read_csv("data/^TWII.csv");
 Y = data2[['Date', 'Close']];
+Y = Y.copy()
+
 Y.loc[:, 'Date'] = pd.to_datetime(Y['Date'])
 Y['Close'] = pd.to_numeric(Y['Close'], errors='coerce')
 
