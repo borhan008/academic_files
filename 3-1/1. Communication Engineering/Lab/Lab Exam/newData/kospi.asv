@@ -1,0 +1,95 @@
+
+
+
+[rownum colnum]= size(RAWALLDATA);
+for i=1:rownum
+    for j=1:colnum
+        if(RAWALLDATA(i,j)==0)
+            RAWALLDATA(i,j)=RAWALLDATA(i-1,j);
+        end
+    end
+end
+Final_RAWALLDATA=RAWALLDATA;
+dlmwrite('Degree2009.txt',Degree2009,'delimiter','\t');
+
+[rownum colnum]= size(RAWDATA);
+for i=1:rownum-1
+    for j=1:colnum
+        
+        retun_test1(i,j)=log(RAWDATA(i+1,j))-log(RAWDATA(i,j));
+        
+    end
+end
+
+
+ n = size (d,1); %Number of vertices
+    for i=1:n
+        for j=1:n
+            d(i,j)=sqrt(2*(1-abs(d(i,j)))); %make distance matrix
+        end
+    end
+    
+    
+    
+    
+    
+    for i=1:36
+        for j=1:36
+            if (Cross_glo_bef(i,j)>=0.4554)
+                Cross_11(i,j)=Cross_glo_bef(i,j);
+            end
+        end
+    end
+    
+    
+    
+  for j=1:32
+H=result*A(:,j+1)
+  end
+   result=A(:,j)*A(:,j+1) 
+   
+   
+   
+   
+   
+   for i=1:15
+       retun_all=Retun(251*(i-1)+1:251*i,1:100);
+       Crossusnew0=corrcoef(retun_all);
+       
+    
+    dlmwrite(sprintf('Crossusnew0%d.txt',i),Crossusnew0,'delimiter','\t');
+       
+   end
+   
+   Generating random number in a specific range within interval [a,b]:
+   
+   
+   r = a + (b-a).*rand(100,1);
+   
+   symmatric random matrix;
+   
+   a=rand(5);
+b=triu(a).'+triu(a,1);
+a=-0.12;
+b=0.12;
+ r = a + (b-a).*rand(30,30);
+ AA=triu(r).'+triu(r,1);
+   d=Crossgloba4+AA;
+   for i=1:30
+       d(i,j)=1;
+   end
+   
+   
+   [rownum colnum]= size(Kospi_all);
+for i=1:rownum-1
+    for j=1:colnum
+        
+        retun_test1(i,j)=log(Kospi_all(i+1,j))-log(Kospi_all(i,j));
+        
+    end
+end
+
+   
+   
+    
+        
