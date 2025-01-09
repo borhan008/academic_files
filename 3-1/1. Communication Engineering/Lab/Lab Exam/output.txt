@@ -1,0 +1,76 @@
+Bins: 10
+Entropy of halla_climate.csv 'Close' column:
+ Entropy of 2000: 2.455368
+ Entropy of 2001: 2.343528
+ Entropy of 2002: 2.089723
+ Entropy of 2003: 2.381988
+ Entropy of 2004: 2.769993
+ Entropy of 2005: 2.328417
+ Entropy of 2006: 2.758344
+ Entropy of 2007: 2.454619
+ Entropy of 2008: 2.283117
+ Entropy of 2009: 2.733854
+ Entropy of 2010: 2.851432
+ Entropy of 2011: 2.814968
+ Entropy of 2012: 1.85291
+
+Mutual information of halla_climate.csv 'Close'  column with its 'Open' column:
+ Mutual Information of 2000 : 1.801174
+ Mutual Information of 2001 : 1.942309
+ Mutual Information of 2002 : 1.707788
+ Mutual Information of 2003 : 2.362713
+ Mutual Information of 2004 : 1.247866
+ Mutual Information of 2005 : 1.594724
+ Mutual Information of 2006 : 1.778051
+ Mutual Information of 2007 : 1.84252
+ Mutual Information of 2008 : 1.782448
+ Mutual Information of 2009 : 2.221684
+ Mutual Information of 2010 : 2.397078
+ Mutual Information of 2011 : 1.656503
+ Mutual Information of 2012 : 1.555181
+
+
+Entropy of kyung_bang.csv 'Close' column:
+ Entropy of 2000: 2.434012
+ Entropy of 2001: 1.885135
+ Entropy of 2002: 2.027513
+ Entropy of 2003: 1.953924
+ Entropy of 2004: 2.581623
+ Entropy of 2005: 2.191928
+ Entropy of 2006: 2.131554
+ Entropy of 2007: 2.279615
+ Entropy of 2008: 1.941244
+ Entropy of 2009: 2.288408
+ Entropy of 2010: 2.644041
+ Entropy of 2011: 2.035292
+ Entropy of 2012: 2.31299
+
+Mutual information of kyung_bang.csv 'Close' column with its 'Open' column:
+ Mutual Information of 2000 : 1.024492
+ Mutual Information of 2001 : 1.442346
+ Mutual Information of 2002 : 0.627438
+ Mutual Information of 2003 : 2.014312
+ Mutual Information of 2004 : 1.210213
+ Mutual Information of 2005 : 1.832916
+ Mutual Information of 2006 : 1.186342
+ Mutual Information of 2007 : 1.656503
+ Mutual Information of 2008 : 2.017987
+ Mutual Information of 2009 : 1.988778
+ Mutual Information of 2010 : 1.463449
+ Mutual Information of 2011 : 1.863997
+ Mutual Information of 2012 : 1.706496
+
+Mutual Information of halla_climate.csv 'Close' and kyung_bang.csv 'Close' columns:
+ Mutual Information of 2000 :  0.571220
+ Mutual Information of 2001 :  0.788727
+ Mutual Information of 2002 :  0.305085
+ Mutual Information of 2003 :  1.631968
+ Mutual Information of 2004 :  0.347044
+ Mutual Information of 2005 :  0.925303
+ Mutual Information of 2006 :  0.597308
+ Mutual Information of 2007 :  0.877292
+ Mutual Information of 2008 :  0.921385
+ Mutual Information of 2009 :  1.312276
+ Mutual Information of 2010 :  0.908469
+ Mutual Information of 2011 :  0.725922
+ Mutual Information of 2012 :  0.567179

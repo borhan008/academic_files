@@ -1,5 +1,11 @@
 import pandas as pd
 import numpy as np
+import sys
+
+# For Saving data to Output.txt file
+output_file = "output.txt"
+original_stdout = sys.stdout  
+sys.stdout = open(output_file, "w") 
 
 # X
 data = pd.read_csv("newData/halla_climate.csv");
@@ -107,3 +113,9 @@ unique_years = sorted(unique_years)
 for year in unique_years:
     yearly_data = XY[XY['Date'].dt.year == year]
     print(f" Mutual Information of {year} : {mutualInformation(yearly_data['Close_x'], yearly_data['Close_y'], 10) : .6f}");
+
+
+# For saving data to Output.txt file
+sys.stdout.close()  
+sys.stdout = original_stdout  
+print(f"Output has been saved to {output_file}")
