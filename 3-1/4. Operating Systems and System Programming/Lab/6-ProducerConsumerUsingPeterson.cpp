@@ -10,39 +10,41 @@ int turn = 0;
 
 void producer()
 {
-    for (int i = 1; i <= 15; i++)
+    for (int i = 1; i <= 1000; i++)
     {
         flag[0] = 1;
         turn = 1;
         while (flag[1] && turn == 1)
             ;
-        while (cnt == BUFFER_SIZE)
+        if (cnt == BUFFER_SIZE)
         {
             flag[0] = 0;
-            this_thread::sleep_for(chrono::milliseconds(100));
+            printf("Buffer is full. Producer is waiting\n");
+            this_thread::sleep_for(chrono::milliseconds(1000));
             flag[0] = 1;
         }
         buffer.push_back(i);
         cnt++;
         cout << "Produced " << i << endl;
         flag[0] = 0;
-        this_thread::sleep_for(chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(10));
     }
 }
 
 void consumer()
 {
-    for (int i = 1; i <= 15; i++)
+    for (int i = 1; i <= 1000; i++)
     {
         flag[1] = 1;
         turn = 0;
         while (flag[0] && turn == 0)
             ;
 
-        while (cnt == 0)
+        if (cnt == 0)
         {
             flag[1] = 0;
-            this_thread::sleep_for(chrono::milliseconds(100));
+            printf("Buffer is empty. Consumer is waiting\n");
+            this_thread::sleep_for(chrono::milliseconds(1000));
             flag[1] = 1;
         }
 
@@ -51,7 +53,7 @@ void consumer()
         cnt--;
         cout << "Consumed " << product << endl;
         flag[1] = 0;
-        this_thread::sleep_for(chrono::milliseconds(100));
+        this_thread::sleep_for(chrono::milliseconds(10));
     }
 }
 
