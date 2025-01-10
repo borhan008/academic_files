@@ -76,5 +76,4 @@ int main()
     singal(sem);
     wait(sem, &p3);
     singal(sem);
-    singal(sem);
 }
