@@ -1,0 +1,1 @@
+{"name":"Local: 1","url":"d:\\AcademicGithub\\3-1\\4. Operating Systems and System Programming\\Lab\\1.RoundRobin.cpp","tests":[{"id":1736483479735,"input":"3\n0 3\n2 1\n3 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\AcademicGithub\\3-1\\4. Operating Systems and System Programming\\Lab\\1.RoundRobin.cpp","group":"local","local":true}
