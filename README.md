@@ -38,6 +38,10 @@
 
 1. [Hindi (Best One)](https://www.youtube.com/playlist?list=PL1QH9gyQXfguPNDTsnG90W2kBDQpYLDQr)
 
+**CSTE3112: Compiler Construction Lab**
+
+1. [Implementation by Soikot](https://github.com/a-h-soikot/CompilerLab)
+
 **CSTE3109: Microprocessor, Microcontroller and Interfacing**
 
 **CSTE3105: Database Management System**
