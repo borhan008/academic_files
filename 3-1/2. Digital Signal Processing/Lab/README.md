@@ -527,7 +527,7 @@ x_recon = zeros(size(t_recon));
 % Perform sinc interpolation
 for i = 1:length(t_recon)
     for j = 1:length(sampleTime)
-        x_recon(i) = x_recon(i) + sampleSignal(j) * my_sinc((t_recon(i) - sampleTime(j))/Ts);
+        x_recon(i) = x_recon(i) + sampleSignal(j) * my_sinc((t_recon(i) - sampleTime(j))/t_nq);
     end
 end
 
