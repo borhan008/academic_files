@@ -302,7 +302,7 @@ function y = linearConv(x, h)
         end
 end
 
-function checkDistributiveProperty(x, h)
+function checkCommutativeProperty(x, h)
     fprintf("By Calculating customly: x*h ");
     y1 = linearConv(x, h)
     fprintf("By Calculating customly: h*x ");
@@ -321,7 +321,7 @@ x = str2num(input('', 's'));
 fprintf("Enter the values of h:");
 h = str2num(input('', 's'));
 
-checkDistributiveProperty(x, h)
+checkCommutativeProperty(x, h)
 
 
 %% Input:
@@ -333,7 +333,7 @@ checkDistributiveProperty(x, h)
 #### Using Built in function
 
 ```matlab
-function checkDistributiveProperty(x, h)
+function checkCommutativeProperty(x, h)
     fprintf("By Calculating customly: x*h ");
     y1 = conv(x, h)
     fprintf("By Calculating customly: h*x ");
@@ -352,7 +352,7 @@ x = str2num(input('', 's'));
 fprintf("Enter the values of h:");
 h = str2num(input('', 's'));
 
-checkDistributiveProperty(x, h)
+checkCommutativeProperty(x, h)
 
 
 %% Input:
