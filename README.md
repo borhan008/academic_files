@@ -2,7 +2,13 @@
 
 [https://nstucoverpage.netlify.app/](https://nstucoverpage.netlify.app/)
 
-### Resources Based On Course
+## My notes based on course
+
+**BLWS1201 : History of the Emergence of Independence Bangladesh**
+
+1. [QA](1-2/BLWS/PDF/BMS__QA.pdf)
+
+### Video and Other Resources Based On Course
 
 **CSTE2205 : Signals and Systems**
 
