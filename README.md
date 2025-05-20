@@ -4,7 +4,7 @@ These files are far from perfect. In fact, you’ll probably find plenty of mist
 
 If you're looking for polished, professor-level material, you're in the wrong repo. But if you're just trying to figure stuff out like I did, welcome aboard. Copy what you need, laugh at what you don't and may your exams be easier than mine.
 
-[![GitHub](https://img.shields.io/badge/GitHub-borhan008-181717?style=flat&logo=github)](https://github.com/borhan008/academic_files)
+Visit GitHub for full access : [![GitHub](https://img.shields.io/badge/GitHub-borhan008-181717?style=flat&logo=github)](https://github.com/borhan008/academic_files)
 
 - [Academic Trash 🗑️](#academic-trash-️)
     - [NSTU Cover Page Generator](#nstu-cover-page-generator)
@@ -54,7 +54,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **MATH 1203 : Ordinary and Partial Differential equations**
 
-1. [Note](<1-2/Ordinary%20&%20Partial%20Differentiation/PDF/Ordinary__Partial_Differentiation%20(1).pdf>)
+1. [Note](1-2/Ordinary%20&%20Partial%20Differentiation/PDF/Ordinary__Partial_Differentiation%20(1).pdf)
 2. [CT-1 Solutionn](1-2/Ordinary%20&%20Partial%20Differentiation/PDF/Math%20CT-1%20Solution.pdf)
 
 **BMS 1201 : History of the Emergence of Independent Bangladesh**
@@ -99,6 +99,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **CSTE 2201 : Object Oriented Programming with Java**
 1. [Basic Notes](2-2/1.%20Object%20Oriented%20Programming%20with%20JAVA/Notes/Java%20Exam%20Prep%20QA.pdf)
+2. [Project Final](2-2/1.%20Object%20Oriented%20Programming%20with%20JAVA/Project/java%20project%20final.pdf)
 
 **CSTE 2203 : Digiral Electronics and Pulse Technique**
 1. [Note for Rivision](2-2/2.%20Digital%20Electronics%20and%20Pulse%20Technique/DEPT%20REVISION.pdf)
@@ -140,6 +141,9 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **CSTE 3105 :  Database Management System**
 1. [CT-2 ERD](3-1/3.%20%20Database%20Management%20System/Mine/CT-2-ER-Diagram-Normalization.pdf)
+2. [Project Proposal](3-1/3.%20%20Database%20Management%20System/Project/project-proposal-final.pdf)
+3. [Project Report](3-1/3.%20%20Database%20Management%20System/Project/Project%20Report%20.pdf)
+4. [Project Presentation](3-1/3.%20%20Database%20Management%20System/Project/Project-proposal-slide-08-28.pptx)
 
 
 **CSTE 3107 :  Operating Systems and System Programming**
