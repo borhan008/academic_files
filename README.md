@@ -1,3 +1,22 @@
+# Academic Trash 🗑️
+**Read at Your Own Risk: Useless Academic Files Inside**! <br/>
+These files are far from perfect. In fact, you’ll probably find plenty of mistakes, typos, rushed diagrams and logic that only made sense at 3 AM. But hey, that’s how real learning happens, huhhh ? Through bugs, errors and last-minute realizations.
+
+If you're looking for polished, professor-level material, you're in the wrong repo. But if you're just trying to figure stuff out like I did, welcome aboard. Copy what you need, laugh at what you don't and may your exams be easier than mine.
+
+[![GitHub](https://img.shields.io/badge/GitHub-borhan008-181717?style=flat&logo=github)](https://github.com/borhan008/academic_files)
+
+- [Academic Trash 🗑️](#academic-trash-️)
+    - [NSTU Cover Page Generator](#nstu-cover-page-generator)
+  - [My notes based on course](#my-notes-based-on-course)
+    - [Year 01 Term 02](#year-01-term-02)
+    - [Year 02 Term 01](#year-02-term-01)
+    - [Year 02 Term 02](#year-02-term-02)
+    - [Year 03 Term 01](#year-03-term-01)
+    - [Year 03 Term 02](#year-03-term-02)
+    - [Video and Other Resources Based On Course](#video-and-other-resources-based-on-course)
+
+
 ### NSTU Cover Page Generator
 
 [https://nstucoverpage.netlify.app/](https://nstucoverpage.netlify.app/)
