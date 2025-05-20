@@ -4,7 +4,8 @@ These files are far from perfect. In fact, you’ll probably find plenty of mist
 
 If you're looking for polished, professor-level material, you're in the wrong repo. But if you're just trying to figure stuff out like I did, welcome aboard. Copy what you need, laugh at what you don't and may your exams be easier than mine.
 
- [![GitHub for full access](https://img.shields.io/badge/GitHub-borhan008-181717?style=flat&logo=github)](https://github.com/borhan008/academic_files)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/borhan008)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@borhan008)
 
 - [Academic Trash 🗑️](#academic-trash-️)
     - [NSTU Cover Page Generator](#nstu-cover-page-generator)
