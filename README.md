@@ -76,7 +76,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 1. [Assignment](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
 2. [Lab](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
 
-**CSTE 2105 : Digital Login Design**
+**CSTE 2105 : Digital Logic Design**
 
 1. [QA](2-1/Digiral%20Logic%20Design/Mine/DLD%20QA%20-%20Full.pdf)
 
