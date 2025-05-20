@@ -79,9 +79,69 @@
 2. [Class Routine](2-2/class-routine.jpg)
 
 **CSTE 2201 : Object Oriented Programming with Java**
+1. [Basic Notes](2-2/1.%20Object%20Oriented%20Programming%20with%20JAVA/Notes/Java%20Exam%20Prep%20QA.pdf)
 **CSTE 2203 : Digiral Electronics and Pulse Technique**
-**CSTE 2201 : Object Oriented Programming with Java**
-**CSTE 2201 : Object Oriented Programming with Java**
+1. [Note for Rivision](2-2/2.%20Digital%20Electronics%20and%20Pulse%20Technique/DEPT%20REVISION.pdf)
+**CSTE 2207 :  Data Communication**
+1. [Note](2-2/4.%20Data%20Communication/Notes/Data%20Communication%20Uncompleted.pdf)
+**CSTE 2209 : Computer Architecture and Organization**
+1. [For CT-2](2-2/5.%20Computer%20Architecture%20and%20Organization/My%20notes/Computer%20Arch%20and%20Org%20CT-2.pdf)
+2. [Rivision](2-2/5.%20Computer%20Architecture%20and%20Organization/My%20notes/Computer%20Arch%20and%20Org%20CT-2.pdf)
+**CSTE 2211 : Electromagnetic Waves and Radiating Systems**
+1. [CT-1](2-2/6.%20Electromagnetic%20Waves%20and%20Radiating%20Systems/Notes/Prep%20for%20CT-1.pdf)
+
+**MATH 2207 : Complex Variables, Statistics and Probability**
+1. [CT-1](2-2/7.%20Complex%20Variables,%20Statistics%20and%20Probability/Notes/Prep%20for%20CT-1.pdf)
+
+
+
+### Year 03 Term 01
+1. [Syllabus](3-1/3%201%20Course%20Outline.pdf)
+
+**CSTE 3101 :  Communication Engineering**
+1. [Assignment](3-1/1.%20Communication%20Engineering/Mine/Assignment/communication%20engineering%20assignment.pdf)
+2. [Note (Partial)](3-1/1.%20Communication%20Engineering/Mine/Communication_Engineering%20NOT%20FULL.pdf)
+
+**CSTE 3103 :  Digital Signal Processing**
+1. [Definition](3-1/2.%20Digital%20Signal%20Processing/Mine/DSP%20Signal%20Definition.pdf)
+2. [Z-Transform & Filters](3-1/2.%20Digital%20Signal%20Processing/Mine/Z-transform%20and%20Filters.pdf)
+3. [Relationship between analog, digital and sampling frequency](3-1/2.%20Digital%20Signal%20Processing/Mine/Relationship%20between%20analog,%20digital%20and%20sampling%20frequency.pdf)
+
+**CSTE 3105 :  Database Management System**
+1. [CT-2 ERD](3-1/3.%20%20Database%20Management%20System/Mine/CT-2-ER-Diagram-Normalization.pdf)
+
+**CSTE 3107 :  Operating Systems and System Programming**
+1. [Partial Note](3-1/4.%20Operating%20Systems%20and%20System%20Programming/Mine/OS-Uncompleted.pdf)
+
+**CSTE 3109:  Microprocessor, Microcontroller and Interfacing**
+
+.
+
+**CSTE 3110 :  Compiler Construction**
+1. [QA](3-1/6.%20Compiler%20Construction/Mine/QAA-%20Compiler%20Construction.pdf)
+
+
+### Year 03 Term 02
+**CSTE 3201: Computer Networking**
+
+.
+
+**CSTE 3203: Microwave and Satellite Communication**
+
+.
+
+**CSTE 3207: Optical Fiber Communication**
+
+.
+
+**CSTE 3209: Software Engineering and Information System Design**
+
+.
+
+**CSTE 3211: Artificial Intelligence and Neural Networks**
+
+.
+
 
 ### Video and Other Resources Based On Course
 
