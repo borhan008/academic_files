@@ -4,9 +4,84 @@
 
 ## My notes based on course
 
-**BLWS1201 : History of the Emergence of Independence Bangladesh**
+### Year 01 Term 02
+
+1. [Syllabus](1-2/Year%201%20Term%202%20Curriculum.pdf)
+
+**CSTE 1201 : Data Structures and Analysis**
+
+1. [Assignment (PDF)](1-2/DS%20With%20C/Assignment/Assignment1_ASH2101008M.pdf)
+2. [Assignment (DOCX)](1-2/DS%20With%20C/Assignment/ds_assignment.docx)\
+3. [Lab Exam Preparation](1-2/DS%20With%20C//PDF/Lab%20Exam%20Preparation.pdf)
+4. [Lab 01](https://github.com/borhan008/academic_files/tree/main/1-2/DS%20With%20C/Lab%20-%201)
+
+**CSTE 1203 : Numerical analysis**
+
+1. [Basic](1-2/Numerical%20Analysis/PDF/Numerical%20Analysis%20Basic.pdf)
+2. [Exam Preaparation](1-2/Numerical%20Analysis//PDF/Exam%20Preparation.pdf)
+3. [Lab Exam Preparation](1-2/Numerical%20Analysis//PDF/Numerical%20Analysis%20Lab%20Preparation%20Code.pdf)
+4. [Lab Code](https://github.com/borhan008/academic_files/tree/main/1-2/Numerical%20Analysis/Lab)
+5. [Others Implementations](https://github.com/borhan008/academic_files/tree/main/1-2/Numerical%20Analysis/Others%20Implementation)
+
+**CSTE 1205 : Discrete Mathematics**
+
+1. [Basic](1-2/Discrete%20Mathematics/PDF/Discrete_Mathematics.pdf)
+2. [QA](1-2/Discrete%20Mathematics/PDF/Question_Analysis_Discrete_Mathematics.pdf)
+
+**CSTE 1207 Electronic Devices and Circuits**
+
+1. [For CT-1](1-2/Electronic%20Device%20&%20Circuit/Preparation-for-CT1.pdf)
+2. [BJT](1-2/Electronic%20Device%20&%20Circuit/BJT.pdf)
+
+**MATH 1203 : Ordinary and Partial Differential equations**
+
+1. [Note](<1-2/Ordinary%20&%20Partial%20Differentiation/PDF/Ordinary__Partial_Differentiation%20(1).pdf>)
+2. [CT-1 Solutionn](1-2/Ordinary%20&%20Partial%20Differentiation/PDF/Math%20CT-1%20Solution.pdf)
+
+**BMS 1201 : History of the Emergence of Independent Bangladesh**
 
 1. [QA](1-2/BLWS/PDF/BMS__QA.pdf)
+
+### Year 02 Term 01
+
+1. [Syllabus](2-1/Year%202%20Term%201%20Course%20Details.pdf)
+
+**CSTE 2101 : Object Oriented Programming with C++**
+
+1. [Note](2-1/Object%20Oriented%20Programming%20with%20C++/Notes/OOP.pdf)
+2. [Assignment](2-1/Object%20Oriented%20Programming%20with%20C++/Assignment/OOP%20Lab%20Assignment%20Soluition%20PDF.pdf)
+
+**CSTE 2103 : Algorithm Design and Analysis**
+
+1. [Assignment](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
+2. [Lab](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
+
+**CSTE 2105 : Digital Login Design**
+
+1. [QA](2-1/Digiral%20Logic%20Design/Mine/DLD%20QA%20-%20Full.pdf)
+
+**CSTE 2107 : Theory of Computation**
+
+1. [QA](2-1/Thoery%20of%20Computation/Mine/TOC%20-%20QAA.pdf)
+2. [CT-1](2-1/Thoery%20of%20Computation//Mine/TOC%20CT-1.pdf)
+
+**HUM 2101 : Industrial Management and Accountancy**
+
+1. [Management](2-1/Industrial%20Management%20and%20Accountancy//Mine/Management-Full.pdf)
+2. [Business and Accounting](2-1/Industrial%20Management%20and%20Accountancy//Mine/Business%20and%20accounting.pdf)
+3. [Sheets from instructors](https://github.com/borhan008/academic_files/tree/main/2-1/Industrial%20Management%20and%20Accountancy/Sheet)
+
+**Math 2105 : Matrices, Vector Analysis and CO-ordinate Geometry** 1.[Problem Solution](2-1/Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry/Mine/Problems%20Solution%20Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry%20.pdf)
+
+### Year 02 Term 02
+
+1. [Syllabus](2-2/2%202%20Course%20Outline.pdf)
+2. [Class Routine](2-2/class-routine.jpg)
+
+**CSTE 2201 : Object Oriented Programming with Java**
+**CSTE 2203 : Digiral Electronics and Pulse Technique**
+**CSTE 2201 : Object Oriented Programming with Java**
+**CSTE 2201 : Object Oriented Programming with Java**
 
 ### Video and Other Resources Based On Course
 
