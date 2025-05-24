@@ -73,8 +73,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **CSTE 2103 : Algorithm Design and Analysis**
 
-1. [Assignment](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
-2. [Lab](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
+1. [Lab](2-1/Algorithm%20Design%20and%20Analysis/Lab/Algorithm_Lab_UPD3.pdf)
 
 **CSTE 2105 : Digital Logic Design**
 
