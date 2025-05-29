@@ -157,6 +157,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 
 **CSTE 3110 :  Compiler Construction**
+
 1. [QA](3-1/6.%20Compiler%20Construction/Mine/QAA-%20Compiler%20Construction.pdf)
 
 
@@ -172,7 +173,11 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **CSTE 3207: Optical Fiber Communication**
 
-.
+
+1. [CT-1 Mathematical QS](3-2/4.%20Optical%20Fiber%20Communication/Mine/CT-1%20Prep%20V%20Last.pdf)
+2. [CT-2 AI Summarization](3-2/4.%20Optical%20Fiber%20Communication/Mine/CT-2-Except-Last-Slide.pdf)
+3. [Differences  (WORST) + Graphs for rivision by AI](3-2/4.%20Optical%20Fiber%20Communication/Mine/Differences,Graphs,Working%20principle.pdf)
+4. [Assignment 1]([3-2/4.%20Optical%20Fiber%20Communication/Assignment/](https://github.com/borhan008/academic_files/tree/main/3-2/4.%20Optical%20Fiber%20Communication/Assignment))
 
 **CSTE 3209: Software Engineering and Information System Design**
 
