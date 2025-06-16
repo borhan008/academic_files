@@ -90,7 +90,9 @@ If you're looking for polished, professor-level material, you're in the wrong re
 2. [Business and Accounting](2-1/Industrial%20Management%20and%20Accountancy//Mine/Business%20and%20accounting.pdf)
 3. [Sheets from instructors](https://github.com/borhan008/academic_files/tree/main/2-1/Industrial%20Management%20and%20Accountancy/Sheet)
 
-**Math 2105 : Matrices, Vector Analysis and CO-ordinate Geometry** 1.[Problem Solution](2-1/Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry/Mine/Problems%20Solution%20Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry%20.pdf)
+**Math 2105 : Matrices, Vector Analysis and CO-ordinate Geometry** 
+
+1.[Problem Solution](2-1/Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry/Mine/Problems%20Solution%20Matrices,%20Vector%20Analysis%20and%20Co-ordinate%20Geometry%20.pdf)
 
 ### Year 02 Term 02
 
@@ -177,7 +179,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 1. [CT-1 Mathematical QS](3-2/4.%20Optical%20Fiber%20Communication/Mine/CT-1%20Prep%20V%20Last.pdf)
 2. [CT-2 AI Summarization](3-2/4.%20Optical%20Fiber%20Communication/Mine/CT-2-Except-Last-Slide.pdf)
 3. [Differences  (WORST) + Graphs for rivision by AI](3-2/4.%20Optical%20Fiber%20Communication/Mine/Differences,Graphs,Working%20principle.pdf)
-4. [Assignment 1]([3-2/4.%20Optical%20Fiber%20Communication/Assignment/](https://github.com/borhan008/academic_files/tree/main/3-2/4.%20Optical%20Fiber%20Communication/Assignment))
+4. [Assignment 1](https://github.com/borhan008/academic_files/tree/main/3-2/4.%20Optical%20Fiber%20Communication/Assignment)
 
 **CSTE 3209: Software Engineering and Information System Design**
 
