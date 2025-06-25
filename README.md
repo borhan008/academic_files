@@ -183,7 +183,8 @@ If you're looking for polished, professor-level material, you're in the wrong re
 
 **CSTE 3209: Software Engineering and Information System Design**
 
-.
+1. [Revision Pupose](3-2/5.%20Software%20Engineering%20and%20Information%20System%20Design/Mine/revision-purpose.pdf)
+
 
 **CSTE 3211: Artificial Intelligence and Neural Networks**
 
