@@ -167,11 +167,14 @@ If you're looking for polished, professor-level material, you're in the wrong re
 ### Year 03 Term 02
 **CSTE 3201: Computer Networking**
 
-.
+
 
 **CSTE 3203: Microwave and Satellite Communication**
 
-.
+
+1. [QA](3-2/2.%20Microwave%20and%20Satelite%20Communication/Mine/QA%20Microwave.pdf)
+
+
 
 **CSTE 3207: Optical Fiber Communication**
 
@@ -243,6 +246,7 @@ If you're looking for polished, professor-level material, you're in the wrong re
 **CSTE 3201: Computer Networking**
 
 **CSTE 3203: Microwave and Satellite Communication**
+
 
 **CSTE 3207: Optical Fiber Communication**
 
