@@ -1,0 +1,6 @@
+Consider the following facts and represent them in predicate form.
+F1: There are 500 employees in ABC Company
+F2: Employees earning more than Tk. 250000 per annum pays tax.
+F3: Jamal is a manager in ABC Company.
+F4: Manager earns Tk. 500000 per annum.
+Convert the facts in predicate form to clauses and then prove by resolution: ‘Jamal pays tax’.
