@@ -863,3 +863,208 @@ print("Original size:", img.size * 8, "bits")
 print("Compression size:", len(encoded), "bits")
 print("Compression ratio:", len(encoded) / (img.size * 8))
 
+"""**4.** Point detection
+
+$$\begin{bmatrix}
+-1 & -1 & -1 \\
+-1 & 8 & -1 \\
+-1 & -1 & -1
+\end{bmatrix}$$
+"""
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img = cv2.imread("/content/1.jpg",0)
+rows, cols = img.shape
+
+mask = np.array(
+   [
+      [-1,-1,-1],
+    [-1,8,-1],
+    [-1,-1,-1]
+   ]
+)
+
+output = np.zeros((rows, cols), dtype=np.uint8)
+
+for i in range(1, rows-1):
+    for j in range(1, cols-1):
+        total = 0
+
+        for x in range(3):
+            for y in range(3):
+                total += int(img[i+x-1, j+y-1]) * mask[x, y]
+
+        if abs(total) > 100:
+            output[i, j] = 255
+
+
+plt.figure(figsize=(12,5))
+plt.subplot(1,2,1)
+plt.imshow(img,  cmap="gray")
+plt.axis("off")
+plt.title("Original Image")
+
+plt.subplot(1,2,2)
+plt.imshow(output, cmap="gray")
+plt.axis("off")
+plt.title("Point Detection")
+plt.show()
+
+"""**Line Detection**
+
+Horizontal,
+\
+\begin{bmatrix}
+-1 & -1 & -1 \\
+ 2 &  2 &  2 \\
+-1 & -1 & -1
+\end{bmatrix}
+
+Vertical,
+
+\begin{bmatrix}
+-1 &  2 & -1 \\
+-1 &  2 & -1 \\
+-1 &  2 & -1
+\end{bmatrix}
+
++45 degree,
+
+\begin{bmatrix}
+ 2 & -1 & -1 \\
+-1 &  2 & -1 \\
+-1 & -1 &  2
+\end{bmatrix}
+
+-45 degree,
+
+\begin{bmatrix}
+-1 & -1 &  2 \\
+-1 &  2 & -1 \\
+ 2 & -1 & -1
+\end{bmatrix}
+
+
+"""
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+img = cv2.imread("/content/1.jpg",0)
+rows,cols = img.shape
+
+masks = [
+    np.array([[-1,-1,-1],
+              [ 2, 2, 2],
+              [-1,-1,-1]]),
+
+    np.array([[-1, 2,-1],
+              [-1, 2,-1],
+              [-1, 2,-1]]),
+
+    np.array([[ 2,-1,-1],
+              [-1, 2,-1],
+              [-1,-1, 2]]),
+
+    np.array([[-1,-1, 2],
+              [-1, 2,-1],
+              [ 2,-1,-1]])
+]
+
+
+outputs = []
+
+for mask in masks:
+
+    result = np.zeros(img.shape, dtype=np.uint8)
+
+    for i in range(1, rows-1):
+        for j in range(1, cols-1):
+
+            total = 0
+
+            for x in range(3):
+                for y in range(3):
+                    total += int(img[i+x-1, j+y-1]) * mask[x,y]
+
+            if total > 100:
+                result[i,j] = 255
+
+    outputs.append(result)
+
+
+
+
+plt.figure(figsize=(10,8))
+
+for i in range(4):
+    plt.subplot(2,2,i+1)
+    plt.imshow(outputs[i], cmap='gray')
+    plt.axis('off')
+
+plt.show()
+
+"""**Edge Detection**
+
+Sobel X =
+$\begin{bmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 1
+\end{bmatrix}$
+
+
+Sobel Y = $\begin{bmatrix}
+-1 & -2 & -1 \\
+0 & 0 & 0 \\
+1 & 2 & 1
+\end{bmatrix}$
+"""
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img = cv2.imread("/content/1.jpg",0)
+rows, cols = img.shape
+
+Gx = np.array([
+    [-1, 0, 1],
+    [-2, 0, 2],
+    [-1, 0, 1]
+])
+
+Gy = np.array([
+    [-1, -2, -1],
+    [ 0,  0,  0],
+    [ 1,  2,  1]
+])
+
+edge = np.zeros(img.shape, dtype=np.uint8)
+
+for i in range(1, rows-1):
+    for j in range(1, cols-1):
+
+        sx = 0
+        sy = 0
+
+        for x in range(3):
+            for y in range(3):
+                pixel = int(img[i+x-1, j+y-1])
+
+                sx += pixel * Gx[x,y]
+                sy += pixel * Gy[x,y]
+
+        magnitude = abs(sx) + abs(sy)
+
+        if magnitude > 150:
+            edge[i,j] = 255
+
+plt.imshow(edge, cmap='gray')
+plt.axis('off')
+plt.show()
