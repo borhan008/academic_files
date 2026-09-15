@@ -1,0 +1,264 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx} 
+\usepackage{geometry}
+\usepackage{titlesec} 
+\usepackage{amsmath}
+\setlength{\parskip}{1em} 
+\titleformat{\section}{\normalfont\LARGE\bfseries}{\thesection}{1em}{}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\geometry{
+    top=1in,
+    bottom=1in,
+    headheight=15pt,
+    footskip=20pt
+}
+\usepackage{hyperref} 
+\usepackage{float}
+\usepackage{tocloft}
+\usepackage{tabularx}
+\usepackage{array}
+
+\begin{document}
+
+% ---------------- Cover Page ----------------
+\begin{titlepage}
+    \thispagestyle{empty} % no page number
+    \begin{center}
+        \includegraphics[width=0.1\textwidth]{logo.png}  \\[1.5em]
+        {\LARGE Noakhali Science \& Technology University} \\
+        Department of Computer Science \& Telecommunication Engineering
+    \end{center}
+
+    \vspace{2cm}
+
+    \begin{center}
+       \textbf{\LARGE Assignment On:} \\[1em]
+        \textbf{\Large A  Survey on Machine Learning Applications for
+Psychological Disorder Detection Using Classification Techniques}
+ \\[1em]
+
+        \textbf{\large Course Code: CSTE 4203} \\[4em]
+
+        {\large Submitted By} \\[0.6em]
+        \textbf{\large Mohammad Borhan Uddin}  \\
+        {\large ID: ASH2101008M}  \\
+        {\large Session: 2020-21}
+
+        \vspace{1cm}
+        
+        {\large Submitted To}  \\[0.6em]
+        \textbf{\large Dr. Fateha Khanam Bappee} \\ 
+        {\large Associate Professor} \\ 
+        {Department of Computer Science \& Telecommunication Engineering} \\ 
+    \end{center}
+
+    \vspace{5cm}
+
+    \begin{center}
+        \textbf{\LARGE Date : 15th September, 2026}
+    \end{center}
+\end{titlepage}
+% --------------------------------------------
+
+% ---------------- Table of Contents ----------------
+\pagestyle{empty}   % suppress numbers globally
+\tableofcontents
+\clearpage
+\pagestyle{plain}   % restore page numbers
+% ---------------------------------------------------
+
+% ---------------- Start Main Content ----------------
+\setcounter{page}{1}       % restart from 1
+
+\section{Introduction}
+\subsection{Topic of the Application Survey}
+This survey examines the application of Machine Learning (ML) classification techniques for the detection of psychological disorders specifically depression and mental stress from user-generated text on social media platforms such as Twitter and Reddit. Automatic mental-health screening is framed as a supervised classification problem, where a model is trained to assign a discrete label to a piece of text or a user profile, for example distinguishing depressive from non-depressive content, stressful from non-stressful posts, or grading posts by depression severity level (minimum, mild, moderate, severe).
+
+The theme is highly relevant given the global burden of mental illness: the World Health Organization estimates that roughly 1 in 8 people worldwide live with a mental disorder, and depression alone affects around 280 million people and contributes to more than 700,000 suicides annually. Because a large share of this population expresses emotional and psychological states openly on social media, classification-based ML offers a scalable, low-cost, and early-warning complement to traditional clinical screening.
+
+The three papers surveyed in this report are:
+
+\begin{enumerate}
+    \item \textbf{Paper 1:} Muzafar, D., Khan, F. Y., \& Qayoom, M. (2023). 
+    ``Machine Learning Algorithms for Depression Detection and Their Comparison.'' 
+    
+    \textit{arXiv:2301.03222}.
+
+    \item \textbf{Paper 2:} Inamdar, S., Chapekar, R., Gite, S., \& Pradhan, B. (2023). 
+    ``Machine Learning Driven Mental Stress Detection on Reddit Posts Using Natural Language Processing.'' 
+    \textit{Human-Centric Intelligent Systems}. 
+    DOI: \texttt{10.1007/s44230-023-00020-8}.
+
+    \item \textbf{Paper 3:} Kerasiotis, M., Ilias, L., \& Askounis, D. (2024). 
+    ``Depression Detection in Social Media Posts Using Transformer-Based Models and Auxiliary Features.'' 
+    \textit{arXiv:2409.20048}.
+\end{enumerate}
+
+\subsection{Problem Description}
+The real-world problem addressed across all three papers is early, automated identification of individuals who may be experiencing depression or elevated psychological stress, based purely on the text they voluntarily post online. Traditional diagnosis of depression and stress relies on clinical interviews, self-report questionnaires (e.g., PHQ-9, Edinburgh Postnatal Depression Scale), and trained mental-health professionals. This process is slow, resource-intensive, dependent on the individual actively seeking help, and cannot scale to population-level or continuous, passive monitoring.
+Core domain challenges shared by the three papers include:
+
+\begin{itemize}
+    \item \textbf{Label scarcity and reliability:} Ground-truth diagnoses are rarely available for social media users, so datasets rely on proxies such as self-declared diagnoses, keyword-based collection (e.g., posts containing ``diagnosed with depression''), heuristic rules (e.g., 80\% of a user's tweets classified as negative), or crowd/expert annotation of individual posts. All of these approaches introduce potential labelling noise and bias.
+
+    \item \textbf{Class imbalance:} Depressive or severe cases are a minority relative to normal/non-depressive posts, which can bias classifiers toward the majority class if not corrected. This issue is addressed directly through data augmentation in Paper~3.
+
+    \item \textbf{Linguistic and contextual complexity:} Depressive and stressed language is often indirect, sarcastic, ambiguous, or context-dependent (e.g., distinguishing genuine distress from casual venting), which is difficult for simple keyword-based or bag-of-words methods to capture.
+
+    \item \textbf{Small, platform-specific datasets:} All three studies work with a few thousand to tens of thousands of posts drawn from a single platform (Twitter or Reddit), limiting how well trained models generalize to other platforms, languages, or demographic groups.
+
+    \item \textbf{Severity and differential diagnosis:} Distinguishing degrees of severity (Paper~3) or differentiating depression from related conditions such as anxiety or PTSD is harder than simple binary detection because symptom language overlaps substantially between classes.
+\end{itemize}
+
+Traditional (non-ML) methods, such as manual review or simple keyword/regular-expression filters, are insufficient because they cannot capture the statistical and contextual patterns in informal, noisy, high-volume social media text, cannot scale to millions of posts, and cannot adapt as language and slang evolve. This motivates the use of supervised machine learning and deep learning classifiers, which can learn discriminative patterns directly from labelled text data.
+
+\section{Solution}
+\subsection{Solution Technology}
+All three papers frame the problem as supervised text classification, but differ substantially in the algorithms, text representations, and engineering pipelines used.
+
+\subsubsection*{Paper 1 : Classical ML and LSTM on Twitter}
+
+Muzafar et al.~\cite{muzafar2023} built a binary depression classifier (depressive vs.\ non-depressive) using 15,000 manually annotated tweets. The text pipeline included tokenization (Stanford CoreNLP), stop-word removal, stemming (Porter Stemmer), lemmatization, and POS filtering, followed by feature extraction using Bag-of-Words, TF-IDF, Count Vectorization, and Word2Vec/Doc2Vec embeddings (CBOW and Skip-gram).
+
+Four classifiers were compared: Support Vector Machine (SVM), Random Forest, Multinomial Naive Bayes, and Long Short-Term Memory (LSTM) networks with a Keras embedding layer. The LSTM used Doc2Vec sequence embeddings, while the classical ML models used TF-IDF/Word2Vec feature vectors, all with an 80--20 train-test split.
+
+\subsubsection*{Paper 2 : Embedding Comparison on Reddit}
+
+Inamdar et al.~\cite{inamdar2023} addressed binary stress classification (stressful vs.\ non-stressful) on the Dreaddit dataset ($\sim$2,800 Reddit posts). Rather than proposing a new classifier architecture, this paper's core technical contribution is a systematic comparison of text representation strategies: classic Bag-of-Words/TF-IDF vectors, contextual ELMo (Embeddings from Language Models) embeddings, and BERT-based tokenization, each fed into machine learning models such as SVM and Logistic Regression.
+
+This lets the authors isolate how much of the classification improvement comes from richer contextual embeddings versus the downstream classifier itself.
+
+\subsubsection*{Paper 3 : Transformer + Auxiliary Features for Severity Classification}
+
+Kerasiotis et al.~\cite{kerasiotis2024} tackled the harder, four-class ordinal problem of depression severity classification (Minimum, Mild, Moderate, Severe) on a Reddit-based severity dataset.
+
+Their architecture extracts hidden states from the last four layers of a DistilBERT transformer, combines them via a learned weighted average (rather than using only the final layer), and concatenates the resulting representation with hand-engineered auxiliary features: presence of depression-medication keywords, EmoRoBERTa-derived emotion scores, and CardiffNLP Twitter-RoBERTa sentiment scores.
+
+This combined feature vector is passed through a dropout layer and a Multi-Layer Perceptron (MLP) classification head. To counter class imbalance, the authors applied BERT-based data augmentation (contextual word insertion and substitution, inspired by the EDA technique) to the minority severity classes.
+
+\subsection{Comparison of Technical Approaches}
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison of Technical Approaches}
+\label{tab:technical_comparison}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{2.2cm}|p{3.5cm}|p{3.5cm}|p{3cm}|}
+\hline
+\textbf{Paper} & \textbf{Algorithms / Models Used} & \textbf{Key Feature Engineering} & \textbf{Best Reported Result} \\
+\hline
+
+Paper 1 (Muzafar et al., 2023) &
+SVM, Random Forest, Multinomial Naive Bayes, LSTM &
+TF-IDF, Bag-of-Words, Word2Vec, Doc2Vec, NLTK preprocessing &
+SVM: 81.79\% accuracy, F1 = 0.79 \\
+\hline
+
+Paper 2 (Inamdar et al., 2023) &
+SVM, Logistic Regression (with ELMo, BERT, BoW/TF-IDF embeddings) &
+ELMo contextual embeddings, BERT tokenization, TF-IDF, BoW &
+SVM + ELMo: F1 = 0.76, Precision = 0.71, Recall = 0.74 \\
+\hline
+
+Paper 3 (Kerasiotis et al., 2024) &
+DistilBERT (4 weighted transformer layers) + MLP classification head &
+Weighted-average BERT hidden states, medication-reference features, EmoRoBERTa emotion features, sentiment features, EDA-based data augmentation &
+Weighted F1 = 84.15\%, Precision = 84.26\%, Recall = 84.18\% \\
+\hline
+
+\end{tabular}
+\end{table}
+
+Across the three papers, there is a clear technological progression: Paper~1 relies on classical ML with static word embeddings and a shallow LSTM; Paper~2 isolates the effect of contextual embeddings (ELMo/BERT) while keeping classical classifiers; and Paper~3 fully embraces transformer-based contextual representations, enriches them with domain-specific auxiliary features, and adds data augmentation to address class imbalance. This reflects the broader shift in the field from bag-of-words and shallow neural methods toward transformer architectures.
+
+
+\subsection{Solution Evaluation}
+All three papers use standard classification metrics---Accuracy, Precision, Recall, and F1-score---computed from confusion-matrix statistics (true/false positives and negatives), since the underlying task is discrete classification rather than regression or clustering. This makes their results directly comparable in terms of methodology, even though the datasets differ.
+
+\begin{table}[htbp]
+\centering
+\caption{Dataset, Evaluation Metrics, and Strengths/Limitations}
+\label{tab:evaluation_comparison}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|p{1.5cm}|X|p{3.2cm}|X|}
+\hline
+\textbf{Paper} & \textbf{Dataset \& Size} & \textbf{Evaluation Metrics} & \textbf{Strengths / Limitations} \\
+\hline
+
+Paper 1 &
+Manually annotated Twitter dataset, 15,000 tweets (balanced: 7,500 depressive / 7,500 non-depressive) &
+Accuracy, Precision, Recall, F1-score, Confusion Matrix &
+\textbf{Strength:} Simple, interpretable classical ML pipeline with clear preprocessing. \textbf{Limitation:} Small single-source dataset, manual 80\% heuristic threshold for labelling a user as depressed, LSTM underperformed simpler ML models, and no external validation. \\
+\hline
+
+Paper 2 &
+Dreaddit dataset, $\sim$2,800 Reddit posts labelled stressful / non-stressful &
+F1-score, Precision, Recall (weighted) &
+\textbf{Strength:} Systematic comparison of embedding strategies (BoW vs.\ ELMo vs.\ BERT) rather than just classifiers. \textbf{Limitation:} Small dataset limits generalizability; cultural/platform-specific context not explored; only Reddit data used. \\
+\hline
+
+Paper 3 &
+Depression Severity Dataset (Reddit), 3,553 posts originally, expanded to 4,353 after augmentation across four ordinal severity classes &
+Weighted Precision, Recall, F1-score, Confusion Matrix, Ablation studies &
+\textbf{Strength:} Rigorous ablation (layers, transformer type, classification head, augmentation) and comparison against 6+ baselines. \textbf{Limitation:} No hyperparameter tuning due to GPU constraints, single dataset, no explainability module, and confusion between adjacent severity classes (e.g., Mild vs.\ Moderate). \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+Comparing the results directly, Paper~1's best model (SVM, 81.79\% accuracy, F1 = 0.79) actually outperformed its own LSTM model (70\% accuracy), suggesting that with a small dataset and simple TF-IDF/Word2Vec features, classical ML can match or beat a shallow deep-learning model. Paper~2's best configuration (SVM with ELMo embeddings, F1 = 0.76) shows a similar pattern but confirms that richer, contextual embeddings improve performance over plain Bag-of-Words even without a transformer classifier. Paper~3 achieves the strongest and most rigorously validated results (weighted F1 = 84.15\%), but on a more complex four-class ordinal task and only after data augmentation, which alone raised the F1-score from about 72.6\% to 84.15\%---underscoring how much class imbalance was hurting the baseline performance.
+
+In terms of limitations, all three studies share the constraint of small, single-platform datasets (ranging from $\sim$2,800 to $\sim$15,000 samples), which restricts generalizability to other languages, cultures, and platforms. None of the three papers validates its models against clinically confirmed diagnoses; all rely on self-report or heuristic labelling, which is a common but important caveat when interpreting ``accuracy'' as a proxy for real diagnostic performance.
+
+Paper~3's ablation studies are the most thorough of the three, systematically testing the number of transformer layers, choice of transformer (BERT vs.\ DistilBERT), and classification head type, which adds confidence to its reported gains, whereas Papers~1 and~2 report single-run results without confidence intervals.
+
+\section{Conclusion}
+
+This survey reviewed three research papers that apply machine learning classification techniques to the problem of detecting depression and mental stress from social media text. The problem is well-motivated by the scale of the global mental-health burden and the limitations of traditional, clinician-dependent diagnosis. All three papers converge on framing the task as supervised text classification, but they differ in sophistication: from classical ML with TF-IDF/Word2Vec features and a shallow LSTM (Paper~1), to a targeted comparison of embedding strategies including ELMo and BERT (Paper~2), to a state-of-the-art transformer-based architecture enriched with emotion, sentiment, and medication-reference features together with data augmentation for a harder multi-class severity task (Paper~3).
+
+Taken together, the literature shows a consistent trend: richer contextual text representations (ELMo, BERT/DistilBERT) and auxiliary domain features tend to outperform purely lexical features (Bag-of-Words, TF-IDF) as the difficulty of the classification task increases, and explicitly handling class imbalance (e.g., through data augmentation) yields some of the largest single improvements in performance. At the same time, all three studies are limited by small, single-platform, and imperfectly labelled datasets, and none has been validated against clinical ground truth. Therefore, despite strong accuracy and F1-scores, these systems should currently be viewed as early-warning or screening aids rather than diagnostic tools.
+
+Promising future directions highlighted in the literature include multi-platform and multilingual datasets, explainable AI to build clinician and user trust, multimodal analysis incorporating images and behavioral metadata, and closer collaboration with mental-health professionals during dataset annotation and model validation.
+
+
+
+\clearpage
+\addcontentsline{toc}{section}{References}
+
+\begin{thebibliography}{99}
+
+\bibitem{muzafar2023}
+D. Muzafar, F. Y. Khan, and M. Qayoom,
+``Machine Learning Algorithms for Depression Detection and Their Comparison,''
+\textit{arXiv preprint arXiv:2301.03222}, 2023.
+Available: \url{https://arxiv.org/pdf/2301.03222}
+
+\bibitem{inamdar2023}
+S. Inamdar, R. Chapekar, S. Gite, and B. Pradhan,
+``Machine Learning Driven Mental Stress Detection on Reddit Posts Using Natural Language Processing,''
+\textit{Human-Centric Intelligent Systems}, 2023.
+doi: \url{https://doi.org/10.1007/s44230-023-00020-8}
+
+\bibitem{kerasiotis2024}
+M. Kerasiotis, L. Ilias, and D. Askounis,
+``Depression Detection in Social Media Posts Using Transformer-Based Models and Auxiliary Features,''
+\textit{arXiv preprint arXiv:2409.20048}, 2024.
+Available: \url{https://arxiv.org/pdf/2409.20048}
+
+\bibitem{whoMentalDisorders2023}
+World Health Organization,
+``Mental Disorders --- Fact Sheet,''
+2023.
+Available: \url{https://www.who.int/news-room/fact-sheets/detail/mental-disorders}
+
+\bibitem{whoDepression2023}
+World Health Organization,
+``Depressive Disorder (Depression) --- Fact Sheet,''
+2023.
+Available: \url{https://www.who.int/news-room/fact-sheets/detail/depression}
+
+\end{thebibliography}
+
+
+\end{document}
