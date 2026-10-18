@@ -2,7 +2,7 @@
 **Read at Your Own Risk: Useless Academic Files Inside**! <br/>
 These files are far from perfect. In fact, you’ll probably find plenty of mistakes, typos, rushed diagrams and logic that only made sense at 3 AM. But hey, that’s how real learning happens, huhhh ? Through bugs, errors and last-minute realizations.
 
-If you're looking for polished, professor-level material, you're in the wrong repo. But if you're just trying to figure stuff out like I did, welcome aboard. Copy what you need, laugh at what you don't and may your exams be easier than mine.
+If you're looking for polished, professor-level material, you're in the wrong repo. But if you're just trying to figure stuff out like I did, welcome aboard. Copy what you need, laugh at what you don't and may your exams be easier than mine. It is incomplete.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/borhan008)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@borhan008)
